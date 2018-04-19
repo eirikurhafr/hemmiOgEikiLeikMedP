@@ -10,17 +10,12 @@ import Offers from '../Offers/Offers.js'
 
 class Menu extends React.Component {
 
-	componentDidMount() {
-		const { getAllPizzas } = this.props;
-		getAllPizzas();
-	}
-
-	render() {
-		const { allPizzas } = this.props;
-		return(
+	render() {		
+		return (
+			
 			<div>
 				<Offers
-					pizzas = {allPizzas}
+					pizzas = {getAllPizzas().payload}
 				/>
 			</div>
 		)
@@ -28,9 +23,10 @@ class Menu extends React.Component {
 }
 
 const mapStateToProps = (state) => {
+
 	return {
 		pizza: state.pizza
 	}
 }
 
-export default connect(mapStateToProps, { getAllPizzas })(Menu);
+export default connect(mapStateToProps, { getAllPizzas }) (Menu);
