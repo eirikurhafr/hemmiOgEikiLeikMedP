@@ -10,27 +10,26 @@ const NavigationBar = () => {
 
 			<div>
 				<nav className={styles.navBar}>
+
                     <NavigationBarLinkWrapper>
 
 						<NavLink
-                    		to="/piss"
-                    		activeClassName="active"
-							className={styles.navLink}>cart</NavLink>
-
-						<NavLink
-                    		to="/offers"
-                    		activeClassName="active"
-							className={styles.navLink}>cart</NavLink>
+                    		to="/"
+                    		activeClassName={styles.navLinkActive}
+							className={styles.navLink}>???
+						</NavLink>
 
 						<NavLink
                     		to="/menu"
-                    		activeClassName="active"
-							className={styles.navLink}>cart</NavLink>
+                    		activeClassName={styles.navLinkActive}
+							className={styles.navLink}>menu
+						</NavLink>
 
 						<NavLink
                     		to="/cart"
-                    		activeClassName="active"
-							className={styles.navLink}>cart</NavLink>
+                    		activeClassName={styles.navLinkActive}
+							className={styles.navLink}>cart
+						</NavLink>
 
 					</NavigationBarLinkWrapper>
 
@@ -38,7 +37,6 @@ const NavigationBar = () => {
 
 			</div>
 		)
-
 }
 
 export default NavigationBar;
